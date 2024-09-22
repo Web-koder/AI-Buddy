@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #6200EA;
+    --secondary-color: #03DAC6;
+    --background-color: #121212;
+    --surface-color: #1E1E1E;
+    --on-surface-color: #FFFFFF;
+    --on-primary-color: #FFFFFF;
+    --error-color: #CF6679;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--on-surface-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--surface-color);
+  }
+
+  #yaar-ai-logo {
+    width: 50px;  /* Adjust this value to fit your logo size */
+    height: auto;
+    margin-right: 15px;
+  }
+
+  #yaar-ai-title {
+    font-size: 2.3rem;
+    margin: 0;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-left: 240px;
+  }
+  
+  #send-btn {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#ai-buddy-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#text-input {
+    flex-grow: 1;
+}
+
+  #controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  #sidebar {
+    width: 200px;
+    background-color: var(--surface-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #feature-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  #ai-buddy-output {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  #ai-buddy-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #text-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--on-surface-color);
+  }
+  
+  #voice-input-btn {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  #language-select, #clear-chat, #theme-toggle {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #language-select {
+    background-color: var(--surface-color);
+    color: var(--on-surface-color);
+    border: 1px solid var(--secondary-color);
+  }
+  
+  #clear-chat {
+    background-color: var(--error-color);
+  }
+  
+  #theme-toggle {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+  }
+  
+  #language-select:hover, #clear-chat:hover, #theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #language-select:hover {
+    background-color: var(--surface-color);
+  }
+  
+  #clear-chat:hover {
+    background-color: #FF5C8D;
+  }
+  
+  #theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+  }
+  
+  .feature-btn {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #ai-buddy-output p {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    font-size: 0.9em;
+  }
+  
+  body.light-theme {
+    --background-color: #F5F5F5;
+    --surface-color: #FFFFFF;
+    --on-surface-color: #121212;
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    #controls {
+      margin-top: 10px;
+      justify-content: space-between;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+    
+    #sidebar {
+      width: 100%;
+      order: -1;
+    }
+    
+    #feature-showcase {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    #language-select, #clear-chat, #theme-toggle {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }

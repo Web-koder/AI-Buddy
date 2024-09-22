@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAAR-AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/Yaar-AI.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app-container">
+      <header>
+        <a href="index.html">
+          <img src="assets/Yaar-AI.png" alt="YAAR-AI Logo" id="yaar-ai-logo">
+        </a>
+        <h1 id="yaar-ai-title">YAAR-AI</h1>
+        <div id="controls">
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+          </select>
+          <button id="clear-chat">Clear Chat</button>
+          <button id="theme-toggle">Toggle Theme</button>
+        </div>
+      </header>
+      <main>
+        <div id="sidebar">
+          <div id="feature-showcase">
+            <button class="feature-btn" data-feature="word-game">Word Game</button>
+            <button class="feature-btn" data-feature="trivia">Trivia</button>
+            <button class="feature-btn" data-feature="quote">Bollywood Quote</button>
+            <button class="feature-btn" data-feature="movie">Movie Recommendation</button>
+            <button class="feature-btn" data-feature="festival">Upcoming Festival</button>
+            <button class="feature-btn" data-feature="lyrics">Song Lyrics</button>
+          </div>
+        </div>
+        <div id="chat-container">
+          <div id="ai-buddy-output"></div>
+          <div id="ai-buddy-input">
+            <input type="text" id="text-input" placeholder="Type or speak...">
+            <button id="voice-input-btn">🎤</button>
+            <button id="send-btn">Send</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
